@@ -6,10 +6,16 @@ class HolbertonCourse {
     if (typeof length !== 'number') {
       throw new Error('TypeError: Length must be a number');
     }
-
+    HolbertonCourse.checkListStrings(students);
     this._name = name;
     this._length = length;
     this._students = students;
+  }
+
+  static checkListStrings(value) {
+    if (!(Array.isArray(value) && value.every((item) => typeof item === 'string'))) {
+      throw new Error('TypeError: Students must be a object');
+    }
   }
 
   get name() {
@@ -39,6 +45,7 @@ class HolbertonCourse {
   }
 
   set students(value) {
+    HolbertonCourse.checkListStrings(value);
     this._students = value;
   }
 }
