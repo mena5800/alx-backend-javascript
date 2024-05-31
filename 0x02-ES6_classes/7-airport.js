@@ -13,7 +13,7 @@ class Airport {
   }
 
   toString() {
-    return `[${this._code}]`;
+    return this._code;
   }
 }
 
