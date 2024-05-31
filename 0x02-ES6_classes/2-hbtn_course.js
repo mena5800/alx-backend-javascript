@@ -6,9 +6,7 @@ class HolbertonCourse {
     if (typeof length !== 'number') {
       throw new Error('TypeError: Length must be a number');
     }
-    if (typeof students !== 'object') {
-      throw new Error('TypeError: Students must be a object');
-    }
+
     this._name = name;
     this._length = length;
     this._students = students;
@@ -41,9 +39,6 @@ class HolbertonCourse {
   }
 
   set students(value) {
-    if (typeof students !== 'object') {
-      throw new Error('TypeError: Students must be a object');
-    }
     this._students = value;
   }
 }

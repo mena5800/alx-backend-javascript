@@ -2,7 +2,7 @@ class Building {
   constructor(sqft) {
     Building._checkNumber(sqft, 'Sqft');
     this._sqft = sqft;
-    if (this.evacuationWarningMessage === undefined) {
+    if (this.constructor !== Building && this.evacuationWarningMessage === undefined) {
       Building.evacuationWarningMessage();
     }
   }
