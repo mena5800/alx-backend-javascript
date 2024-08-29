@@ -11,6 +11,9 @@ describe("calculateNumber", function () {
     it("should return 5 when a = 1.2 and b = 3.7", function () {
       assert.strictEqual(calculateNumber(1.2, 3.7), 5);
     }),
+    it("should return 5 when a = 1.2 and b = 3.2", function () {
+      assert.strictEqual(calculateNumber(1.2, 3.2), 4);
+    }),
     it("should return 6 when a = 1.5 and b = 3.7", function () {
       assert.strictEqual(calculateNumber(1.5, 3.7), 6);
     });
